@@ -16,6 +16,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
+import com.example.newapp.Screens.Animation.SuccessAnimationPage
 import com.example.newapp.Screens.Detailpage
 import com.example.newapp.Screens.HomeScreen
 import com.example.newapp.Screens.NewsViewModel
@@ -49,11 +50,16 @@ fun  AppNavHost() {
         composable<allScreen.ProfilePageScreen> {
             ProfilePage(navController =  navController)
         }
+        composable<allScreen.SuccessAnimatonScreen> { 
+            SuccessAnimationPage(navController = navController)
+        }
 
     }
 
 }
 sealed class allScreen{
+    @Serializable
+    object SuccessAnimatonScreen : allScreen()
     @Serializable
     object HomePage : allScreen()
     @Serializable

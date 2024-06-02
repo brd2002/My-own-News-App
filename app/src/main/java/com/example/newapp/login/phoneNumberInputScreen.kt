@@ -112,7 +112,7 @@ fun phoneNumberInputScreen(modifier: Modifier = Modifier , navController : NavHo
                                 .addOnCompleteListener { task ->
                                     if (task.isSuccessful) {
                                         Toast.makeText(context, "Verification successful", Toast.LENGTH_SHORT).show()
-                                        navController.navigate(allScreen.HomePage){
+                                        navController.navigate(allScreen.SuccessAnimatonScreen){
                                             popUpTo(allScreen.PhoneNumberInputScreen){
                                                 inclusive = true
                                             }
